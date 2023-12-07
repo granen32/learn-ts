@@ -9,9 +9,12 @@ var address = document.querySelector('#address');
 // user data
 var user = {};
 
+function fetchUser() {
+  return axios.get(url);
+}
+
 function startApp() {
-  axios
-    .get(url)
+  fetchUser()
     .then(function (response) {
       console.log(response);
       user = response.data;

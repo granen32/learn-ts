@@ -53,3 +53,19 @@ let regexObj: StringRegexDictionary = {
 Object.keys(regexObj).forEach(value => {
   console.log(value);
 });
+
+interface Person {
+  name: string;
+  age: number;
+}
+// person과 중복되는 부분이 있음 이럴 때 extends를 활용하면됨
+interface Developer extends Person {
+  language: string;
+}
+
+let captain: Developer = {
+  // developer에는 person이 속해있기 때문에
+  name: '캡틴',
+  age: 100,
+  language: 'hi',
+};

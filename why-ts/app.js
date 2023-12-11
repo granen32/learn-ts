@@ -18,7 +18,14 @@ function startApp() {
     .then(function (response) {
       console.log(response);
       user = response.data;
+      console.log(user);
       // TODO: 이름, 이메일, 주소 표시하기
+      const username = document.querySelector('#username');
+      const email = document.querySelector('#email');
+      const address = document.querySelector('#address');
+      username.innerHTML = user.name;
+      email.innerHTML = user.email;
+      address.innerHTML = user.address.city;
     })
     .catch(function (error) {
       console.log(error);

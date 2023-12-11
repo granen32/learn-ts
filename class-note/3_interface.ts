@@ -32,4 +32,24 @@ interface StringArray {
 }
 
 var arr: StringArray = ['a,', 'b', 'c'];
-arr[0]; // "a"
+// arr[0] = 10; // "a"
+
+// 딕셔너리 패턴
+interface StringRegexDictionary {
+  [key: string]: RegExp;
+  // 정규 표현식 생성자
+}
+
+// 정규식 패턴
+let regexObj: StringRegexDictionary = {
+  sth: /abc/,
+  // RegExp 정규표현식이 와야 하는데 문자열이 왔기 때문에 오류
+  //   cssFile: 'css',
+  // 정규표현식으로
+  cssFile: /\.css$/,
+  jsFile: /\.js$/,
+};
+
+Object.keys(regexObj).forEach(value => {
+  console.log(value);
+});

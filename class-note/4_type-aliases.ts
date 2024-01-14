@@ -7,6 +7,7 @@ interface PersoneProps {
   name: string;
   age: number;
 }
+// type은 확자잉 되지않음 ->>
 type Person = {
   name: string;
   age: number;
@@ -16,13 +17,13 @@ type Person = {
 
 // type 같은 경우에는 명시성이 강함
 let seho: Person = {
-  name: '',
+  name: "",
   age: 0,
 };
 
 type MyString = string;
 // 타입 같은 경우에는 자유도가 높아서 별칭이 가능함
-var str: MyString = 'hello';
+var str: MyString = "hello";
 
 type Todo = { id: string; tittle: string; done: boolean };
 

@@ -48,3 +48,17 @@ function genericAdvantage<T>(text: T): T {
 const stri = genericAdvantage<string>('abc');
 stri.charAt(2);
 const login = genericAdvantage<boolean>(true);
+
+interface DropDown {
+  value: string;
+  selected: boolean;
+}
+
+const obj: DropDown = { value: '', selected: false };
+
+interface DropDownGeneric<T> {
+  value: T;
+  selected: boolean;
+}
+
+const objT: DropDownGeneric<string> = { value: '', selected: false };

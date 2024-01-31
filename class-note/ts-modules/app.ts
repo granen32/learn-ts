@@ -1,7 +1,4 @@
-interface Todo {
-  title: string;
-  checked: boolean;
-}
+import { Todo } from './type';
 
 var item: Todo = {
   title: 'hi',
